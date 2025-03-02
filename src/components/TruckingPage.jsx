@@ -1,11 +1,24 @@
 import React from 'react';
 import { Building, Store, Truck, Check } from 'lucide-react';
+import networkFlowImage from '../assets/network-flow.jpg';
+import tuskerLinearLogo from '../assets/tusker-linear-logo.png';
+import { Link } from 'react-router-dom';
 
 const TruckingPage = () => {
   return (
-    <div className="bg-white p-8">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-6">
+    <div className="bg-white p-8 relative">
+      <div className="max-w-5xl mx-auto relative pt-20">
+        <div className="absolute top-0 left-0 -ml-8 -mt-8 z-10">
+          <Link to="/">
+            <img
+              src={tuskerLinearLogo}
+              alt="Tusker Logo"
+              className="w-24 md:w-32 transform hover:scale-105 transition-transform duration-200"
+            />
+          </Link>
+        </div>
+
+        <h2 className="text-2xl font-semibold text-blue-800 mb-6 pl-24 md:pl-0">
           Pioneering Multi-Modal Fractional Trucking Network
         </h2>
 
@@ -19,7 +32,7 @@ const TruckingPage = () => {
 
         <div className="mb-8">
           <img 
-            src="/placeholder-image-6.jpg" 
+            src={networkFlowImage} 
             alt="Network architecture visualization" 
             className="w-full rounded-lg shadow-lg mb-2"
           />
@@ -28,6 +41,7 @@ const TruckingPage = () => {
           </p>
         </div>
 
+        {/* Rest of the component remains the same */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-blue-50 p-6 rounded-lg">
             <div className="flex justify-center mb-4">

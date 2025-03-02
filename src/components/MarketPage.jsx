@@ -2,11 +2,23 @@ import React from 'react';
 import { Store, Users, TrendingUp, ArrowRight } from 'lucide-react';
 import MarketGrowthChart from './MarketGrowthChart.jsx';
 import marketplaceImage from '../assets/colorful-marketplace.jpg';
+import tuskerLinearLogo from '../assets/tusker-linear-logo.png';
+import { Link } from 'react-router-dom';
 
 const MarketPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-4 md:p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="bg-white p-8 relative">
+      <div className="max-w-5xl mx-auto relative pt-20">
+        <div className="absolute top-0 left-0 -ml-8 -mt-8 z-10">
+          <Link to="/">
+            <img
+              src={tuskerLinearLogo}
+              alt="Tusker Logo"
+              className="w-24 md:w-32 transform hover:scale-105 transition-transform duration-200"
+            />
+          </Link>
+        </div>
+
         <h2 className="text-4xl font-bold text-blue-800 mb-8 text-center animate-fade-in">The Bharat Opportunity</h2>
         
         <div className="bg-white shadow-lg rounded-lg mb-12 overflow-hidden animate-fade-in-delayed">

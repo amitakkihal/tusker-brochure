@@ -1,10 +1,23 @@
 import React from 'react';
 import { Check, Building, Phone } from 'lucide-react';
+import operationsOverview from '../assets/operations-overview.jpg';
+import tuskerLinearLogo from '../assets/tusker-linear-logo.png';
+import { Link } from 'react-router-dom';
 
 const PartnershipPage = () => {
   return (
-    <div className="min-h-screen bg-white p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="bg-white p-8 relative">
+      <div className="max-w-4xl mx-auto relative pt-20">
+        <div className="absolute top-0 left-0 -ml-8 -mt-8 z-10">
+          <Link to="/">
+            <img
+              src={tuskerLinearLogo}
+              alt="Tusker Logo"
+              className="w-24 md:w-32 transform hover:scale-105 transition-transform duration-200"
+            />
+          </Link>
+        </div>
+
         {/* Section Title */}
         <h1 className="text-4xl font-bold text-blue-800 text-center mb-8">
           End-to-End Digital Partnership
@@ -56,7 +69,7 @@ const PartnershipPage = () => {
         {/* Platform & Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <img 
-            src="/placeholder-image-11.jpg" 
+            src={operationsOverview} 
             alt="Partner dashboard" 
             className="w-full rounded-lg shadow-lg"
           />

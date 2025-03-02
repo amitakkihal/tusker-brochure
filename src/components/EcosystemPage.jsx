@@ -1,11 +1,24 @@
 import React from 'react';
 import { Building, Store, Boxes, ArrowRight } from 'lucide-react';
+import tuskerLinearLogo from '../assets/tusker-linear-logo.png'; // Import the linear logo PNG
+import ecosystemFlowimage from '../assets/ecosystem-flow.jpg';
+import { Link } from 'react-router-dom';
 
 const EcosystemPage = () => {
   return (
-    <div className="min-h-screen bg-white p-8">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-6">The Tusker Ecosystem</h2>
+    <div className="bg-white p-8 relative">
+      <div className="max-w-5xl mx-auto relative pt-20">
+        <div className="absolute top-0 left-0 -ml-8 -mt-8 z-10">
+          <Link to="/">
+            <img
+              src={tuskerLinearLogo}
+              alt="Tusker Logo"
+              className="w-24 md:w-32 transform hover:scale-105 transition-transform duration-200"
+            />
+          </Link>
+        </div>
+
+        <h2 className="text-2xl font-semibold text-blue-800 mb-6 text-center">The Tusker Ecosystem</h2>
         
         <div className="bg-blue-50 p-8 rounded-lg mb-12">
           <h3 className="text-xl font-semibold mb-6">How It Works</h3>
@@ -34,7 +47,7 @@ const EcosystemPage = () => {
           </div>
 
           <img 
-            src="/placeholder-image-5.jpg" 
+            src={ecosystemFlowimage} 
             alt="Ecosystem flow visualization" 
             className="w-full rounded-lg shadow-lg mb-8"
           />
